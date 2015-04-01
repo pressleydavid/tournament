@@ -7,3 +7,15 @@
 -- these lines here.
 
 
+create table players (
+ID serial primary key,
+lastname varchar(80),
+firstname varchar(80)
+);
+
+create table standings (
+ID serial primary key references players,
+wins int,
+losses int,
+matchesplayed int
+);
